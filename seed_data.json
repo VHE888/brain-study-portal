@@ -1,0 +1,62 @@
+[
+    {
+        "title": "Single-cell transcriptomic analysis of Alzheimer's disease",
+        "journal": "Nature",
+        "publication_date": "2019-05-01",
+        "datasets": [
+            {
+                "url": "https://www.synapse.org/#!Synapse:syn18485175",
+                "species": "Human",
+                "regions": ["Prefrontal Cortex"]
+            }
+        ]
+    },
+    {
+        "title": "Single-Cell RNA-seq reveals transcriptomic modulation of Alzheimer's disease by activated protein C",
+        "journal": "Aging (Albany NY)",
+        "publication_date": "2024-02-21",
+        "datasets": [
+            {
+                "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE242509",
+                "species": "Mouse",
+                "regions": ["Hippocampus"]
+            }
+        ]
+    },
+    {
+        "title": "Graph-based autoencoder integrates spatial transcriptomics with chromatin images and identifies joint biomarkers for Alzheimer's disease",
+        "journal": "Nature Communications",
+        "publication_date": "2022-12-03",
+        "datasets": [
+            {
+                "url": "https://www.nature.com/articles/s41467-022-35233-1#data-availability",
+                "species": "Mouse",
+                "regions": ["Prefrontal Cortex"]
+            }
+        ]
+    },
+    {
+        "title": "A single-cell atlas of entorhinal cortex from individuals with Alzheimer's disease reveals cell-type-specific gene expression regulation",
+        "journal": "Nature Neuroscience",
+        "publication_date": "2019-11-25",
+        "datasets": [
+            {
+                "url": "http://adsn.ddnetbio.com/",
+                "species": "Human",
+                "regions": ["Entorhinal Cortex"]
+            }
+        ]
+    },
+    {
+        "title": "Single-cell multiomics reveals disrupted glial gene regulatory programs in Alzheimer's disease",
+        "journal": "bioRxiv",
+        "publication_date": "2025-03-17",
+        "datasets": [
+            {
+                "url": "https://seattlead.org/",
+                "species": "Human",
+                "regions": ["Prefrontal Cortex", "Hippocampus"]
+            }
+        ]
+    }
+]
