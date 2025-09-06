@@ -20,16 +20,55 @@
     <main>
         <h2 class="text-3xl font-semibold mb-6">Publications & Datasets</h2>
 
+        <!-- Filter Form -->
+        <div class="bg-white p-6 rounded-lg shadow-sm mb-8 border">
+            <form action="/studies" method="GET" class="flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-4 sm:space-y-0">
+                <div class="flex-1">
+                    <label for="species_id" class="block text-sm font-medium text-gray-700">Filter by Species:</label>
+                    <select name="species_id" id="species_id" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md">
+                        <option value="">All Species</option>
+                        {% for species in all_species %}
+                            <option value="{{ species.sid }}" {% if species.sid == selected_species_id %}selected{% endif %}>
+                                {{ species.species_name }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="flex-1">
+                    <label for="region_id" class="block text-sm font-medium text-gray-700">Filter by Brain Region:</label>
+                    <select name="region_id" id="region_id" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md">
+                        <option value="">All Regions</option>
+                        {% for region in all_regions %}
+                            <option value="{{ region.rid }}" {% if region.rid == selected_region_id %}selected{% endif %}>
+                                {{ region.brain_region_name }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                
+                <div class="flex items-end space-x-2 pt-5">
+                    <button type="submit" class="bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition-colors">
+                        Filter
+                    </button>
+                    <a href="/studies" class="bg-gray-200 text-gray-700 font-bold py-2 px-4 rounded hover:bg-gray-300 transition-colors">
+                        Reset
+                    </a>
+                </div>
+            </form>
+        </div>
+        <!-- End Filter Form -->
+
+
         <div class="space-y-8">
-            <!-- Flask will loop through your publications and render them here -->
             {% for pub in publications %}
             <article class="bg-white border p-6 rounded-lg shadow-sm">
                 <h3 class="text-2xl font-semibold text-gray-800">{{ pub.title }}</h3>
-                <p class="text-gray-600 my-2">{{ pub.journal }} - Published on {{ pub.publication_date.strftime('%B %Y') }}</p>
+                <p class="text-gray-600 my-2">{{ pub.journal }} - Published on {{ pub.publication_date.strftime('%B %d, %Y') }}</p>
                 
                 {% for dataset in pub.datasets %}
                 <div class="border-t mt-4 pt-4">
-                    <h4 class="text-lg font-semibold">Dataset</h4>
+                    <h4 class="text-lg font-semibold">Dataset Details</h4>
                     <ul class="list-disc list-inside mt-2 text-gray-700">
                         <li><strong>Species:</strong> {{ dataset.species.species_name }}</li>
                         <li>
@@ -46,7 +85,9 @@
                 {% endfor %}
             </article>
             {% else %}
-            <p class="text-gray-500">No publications found in the database.</p>
+            <div class="bg-white border p-6 rounded-lg shadow-sm text-center">
+                <p class="text-gray-600 text-lg">No publications match your filter criteria.</p>
+            </div>
             {% endfor %}
         </div>
     </main>
