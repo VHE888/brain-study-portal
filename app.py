@@ -18,23 +18,15 @@ db.init_app(app)
 @app.route('/')
 def home():
     """Renders the home page."""
+    # This route will show a simple welcome page.
     return render_template('index.html', page='home')
 
 @app.route('/studies')
 def studies():
     """Renders the studies page, fetching all publications from the database."""
-    all_studies = Publication.query.order_by(Publication.publication_date.desc()).all()
-    return render_template('index.html', page='studies', studies=all_studies)
+    all_publications = Publication.query.order_by(Publication.publication_date.desc()).all()
+    return render_template('studies.html', publications=all_publications)
 
-@app.route('/visualizations')
-def visualizations():
-    """Renders the visualizations page."""
-    return render_template('index.html', page='visualizations')
-
-@app.route('/help')
-def help_page():
-    """Renders the help page."""
-    return render_template('index.html', page='help')
 
 
 # --- MAIN EXECUTION BLOCK ---
