@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Study Portal - Help</title>
+    <!-- Tailwind CSS for basic styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-8 bg-gray-50">
+
+    <header class="mb-8 border-b pb-4">
+        <h1 class="text-4xl font-bold">Brain Study Portal</h1>
+        <nav class="mt-4 space-x-6">
+            <a href="/" class="text-blue-600 hover:underline">Home</a>
+            <a href="/studies" class="text-blue-600 hover:underline">Studies</a>
+            <a href="/help" class="text-blue-600 hover:underline font-bold">Help</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="text-3xl font-semibold mb-6">Help & Frequently Asked Questions</h2>
+
+        <div class="space-y-8 bg-white p-8 rounded-lg shadow-sm border">
+            
+            <section>
+                <h3 class="text-2xl font-semibold text-gray-800">How to Use the Portal</h3>
+                <p class="text-gray-700 mt-2">
+                    Welcome to the Brain Study Portal! This site is designed to help researchers and students explore single-cell studies related to Alzheimer's Disease.
+                </p>
+                <ul class="list-disc list-inside mt-4 space-y-2 text-gray-700">
+                    <li><strong>Home Page:</strong> Provides a general introduction to the portal.</li>
+                    <li><strong>Studies Page:</strong> This is the core of the portal. It lists all the publications we have cataloged. You can use the filter controls at the top of the page to narrow down the results by species (e.g., Human, Mouse) or by the specific brain region studied.</li>
+                    <li><strong>Help Page:</strong> You are here! This page provides information and answers to common questions.</li>
+                </ul>
+            </section>
+
+            <section class="border-t pt-6">
+                <h3 class="text-2xl font-semibold text-gray-800">Frequently Asked Questions (FAQ)</h3>
+                <div class="mt-4 space-y-4">
+                    <div>
+                        <h4 class="font-semibold text-lg">Where does the data come from?</h4>
+                        <p class="text-gray-700">All publication and dataset information is manually curated from public sources like PubMed, Nature, and Science. Each dataset has a direct link to its source where the data can be accessed.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg">How is the data structured?</h4>
+                        <p class="text-gray-700">We use a relational database to link publications to their corresponding datasets. Each dataset is tagged with the species and the brain region(s) studied to enable effective filtering.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg">How can I contribute a study to the portal?</h4>
+                        <p class="text-gray-700">Currently, data is added by our internal team. We are planning to add a contribution feature in the future. Please check back later for updates!</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="border-t pt-6">
+                <h3 class="text-2xl font-semibold text-gray-800">Contact Us</h3>
+                <p class="text-gray-700 mt-2">
+                    Have questions or feedback? Please reach out to our team at <a href="mailto:hanjinglin0809@gmail.com" class="text-blue-600 hover:underline">contact@brainstudyportal.org</a>.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="mt-12 pt-4 border-t text-center text-gray-500">
+        <p>&copy; 2025 Brain Study Portal</p>
+    </footer>
+
+</body>
+</html>

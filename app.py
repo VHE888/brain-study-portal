@@ -60,6 +60,11 @@ def studies():
         selected_region_id=selected_region_id
     )
 
+@app.route('/help')
+def help():
+    """Renders the help page."""
+    return render_template('help.html')
+
 
 
 # --- MAIN EXECUTION BLOCK ---
