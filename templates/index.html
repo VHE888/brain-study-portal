@@ -1,31 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brain Study Portal - Home</title>
-    <!-- Tailwind CSS for basic styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="p-8">
+{% extends "base.html" %}
 
-    <!-- Header -->
-    {% include 'header.html' %}
+{% block title %}Home{% endblock %}
 
-    <main>
-        <div class="bg-gray-100 p-8 rounded-lg text-center">
-            <h2 class="text-3xl font-semibold mb-4">Welcome to the Portal</h2>
-            <p class="text-lg text-gray-700 max-w-2xl mx-auto">
-                A curated, open-source platform designed to aggregate and showcase single-cell sequencing studies related to Alzheimer's Disease.
-            </p>
-            <a href="/studies" class="mt-6 inline-block bg-blue-600 text-white font-bold py-3 px-6 rounded hover:bg-blue-700 transition-colors text-lg">
-                Explore the Studies
-            </a>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    {% include 'footer.html' %}
-
-</body>
-</html>
+{% block content %}
+<div class="text-center mt-20">
+    <h2 class="text-3xl font-semibold mb-4">Welcome to the Brain Study Portal</h2>
+    <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
+        An open-source platform to discover and explore single-cell datasets from Alzheimer's Disease research.
+    </p>
+    <a href="/studies" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors text-lg">
+        Explore the Studies
+    </a>
+</div>
+{% endblock %}

@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brain Study Portal - Studies</title>
-    <!-- Tailwind CSS for basic styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="p-8 bg-gray-50">
+{% extends "base.html" %}
 
-    <!-- Header -->
-    {% include 'header.html' %}
+{% block title %}Studies{% endblock %}
 
-    <main>
+{% block content %}
         <h2 class="text-3xl font-semibold mb-6">Publications & Datasets</h2>
 
         <!-- Filter Form -->
@@ -85,10 +75,4 @@
             </div>
             {% endfor %}
         </div>
-    </main>
-
-    <!-- Footer -->
-    {% include 'footer.html' %}
-
-</body>
-</html>
+{% endblock %}
