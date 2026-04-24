@@ -4,7 +4,7 @@
 
 This is a lightweight Flask web application designed to support researchers by providing a portal to browse scientific publications and related datasets. It is particularly aimed at facilitating studies in Alzheimer’s disease and brain-related research.
 
-The application uses SQLAlchemy to manage a relational database with four core tables: **Publication**, **Dataset**, **Species**, and **Region**. Each publication can link to multiple datasets, which are associated with specific species and brain regions. Users can explore the database and filter publications dynamically by species and brain region through the web interface.
+The application uses MySQL to manage a relational database with four core tables: **Publication**, **Dataset**, **Species**, and **Region**. Each publication can link to multiple datasets, which are associated with specific species and brain regions. Users can explore the database and filter publications dynamically by species and brain region through the web interface.
 
 ### Features
 - **Home Page (`/`)**: Welcome page introducing the portal.  
