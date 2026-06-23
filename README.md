@@ -14,6 +14,5 @@ The application uses MySQL to manage a relational database with four core tables
 ### Technical Details
 - Configuration (e.g., database connection string, secret key) is stored in `instance/config.py`.  
 - HTML templates are organized in the `templates/` folder.  
-- The application runs on port **5001** by default and can be launched with `python app.py`.  
 
 This project provides a foundation for managing and exploring brain-related publication datasets and can be extended with new data types, search features, and visualizations as research needs evolve.
